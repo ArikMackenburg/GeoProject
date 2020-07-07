@@ -104,29 +104,6 @@ function budgetChart(){
   });
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // var scatterChart = new Chart(ctx, {
 //   type: 'scatter',
 //   data: {
