@@ -11,9 +11,30 @@
   </head>
   <body>
     <header>
+      <section id="logo">
+        <img src="images/Geonetric Logo White.png" alt="Geonetric" width="300">
+      </section>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+        </ul>
+      </nav>
 
     </header>
     <main>
+      <form id="setBeds">
+        <fieldset>
+          <label for="beds">Number of beds</label>
+          <input type="number" id="beds" placeholder="0">
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
+      
       <section>
         <canvas id="myChart"></canvas>
       </section>
