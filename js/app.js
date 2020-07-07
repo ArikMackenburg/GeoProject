@@ -2,7 +2,7 @@
 var data;
 console.log(data);
 var arrayData =[];
-// var userBeds = 0;
+var userBeds = 0;
 
 function Organization(beds,fte,investment,budget,redesign){
   this.beds = beds;
@@ -19,15 +19,15 @@ for(var i = 0; i < data.length; i++){
   new Organization(data[i].beds, data[i].fte,data[i].investment,data[i].budget,data[i].redesign);
 }
 
-// function setUserBeds(event){
-//   event.preventDefault();
-//   var inputBeds = document.getElementById('beds');
-//   console.log(inputBeds);
-//   userBeds = Number(inputBeds.value);
-// }
+function setUserBeds(event){
+  event.preventDefault();
+  var inputBeds = document.getElementById('beds');
+  console.log(inputBeds);
+  userBeds = Number(inputBeds.value);
+}
 
-// var formElement = document.getElementById('setBeds');
-// formElement.addEventListener('submit', setUserBeds);
+var formElement = document.getElementById('setBeds');
+formElement.addEventListener('submit', setUserBeds);
 
 
 var smallArray = [];
@@ -36,18 +36,17 @@ var largeArray = [];
 
 Organization.prototype.groupOrganizations = function(){
   for(var i = 0; i < arrayData.length; i++){
-    console.log(arrayData);
-    if(this.beds < 500){
-      smallArray.push(this.beds);
-    }else if((this.beds >= 500) && (this.beds <= 1000)){
-      medArray.push(this.beds);
+    if(arrayData[i].beds < 300){
+      smallArray.push(arrayData[i]);
+    }else if((arrayData[i].beds >= 300) && (arrayData[i].beds <= 1000)){
+      medArray.push(arrayData[i]);
     }else{
-      largeArray.push(this.beds);
+      largeArray.push(arrayData[i]);
     }
   }
 };
 
-groupOrganizations();
+Organization.prototype.groupOrganizations();
 
 
 
