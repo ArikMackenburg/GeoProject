@@ -10,7 +10,7 @@ header {
 }
 h1 {
   font-size: 50px;
-  color: white;
+  color: black;
   text-align: center;
 }
 a {
@@ -19,8 +19,8 @@ a {
 }
 #logo2 {
   float: left;
-  margin-top: -75px;
-  margin-left: -50px;
+  margin-top: -75px ;
+  margin-left: -30px;
 }
   
 footer{
@@ -28,9 +28,11 @@ footer{
   padding: 50px;
   margin-top: 30px;
 }
+
 nav {
   float: right;
 }
+
 li {
   display: inline-block;
   font-size: 18px;
@@ -38,29 +40,26 @@ li {
   font-family: 'Montserrat', sans-serif;
 
 }
-article {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding:75px; 
-}
 
 h2{
   text-align: center;
   font-size: 25px;
   margin-bottom: 15px;
-  display: inline-block;
+  display: inline-table;
+  border-bottom: black;
+  border-style: double;
+  margin-top: 50px;
 }
 #info2{
   
     background-color: lightgray;
     padding: 50px;
     text-align: center;
-    /* max-width: 50%; */
-    display: block;
+    display:inline-table;
     margin: auto;
     height: 400px;
     box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, .3);
-    /* max-width: 1300px; */
+    
   
 }
 
