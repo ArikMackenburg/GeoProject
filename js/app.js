@@ -26,6 +26,7 @@ function setUserBeds(event){
   userBeds = Number(inputBeds.value);
   selectSize(userBeds);
   budgetChart();
+  fteChart();
 }
 
 var formElement = document.getElementById('setBeds');
@@ -77,6 +78,14 @@ function color(){
   }
   return backgroundColor;
 }
+
+var scatterArray = [];
+
+
+
+
+
+
 function budgetChart(){
 
   var ctx = document.getElementById('myChart').getContext('2d');
@@ -103,30 +112,28 @@ function budgetChart(){
     }
   });
 }
+function fteChart(){
+ 
+  var ctx = document.getElementById('fteChart').getContext('2d');
 
-// var scatterChart = new Chart(ctx, {
-//   type: 'scatter',
-//   data: {
-//     datasets: [{
-//       label: 'FTE Per Beds',
-//       data: [{
-//         x: -10,
-//         y: 0
-//       }, {
-//         x: 0,
-//         y: 10
-//       }, {
-//         x: 10,
-//         y: 5
-//       }]
-//     }]
-//   },
-//   options: {
-//     scales: {
-//       xAxes: [{
-//         type: 'linear',
-//         position: 'bottom'
-//       }]
-//     }
-//   }
-// });
+
+  var scatterChart = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+      datasets: [{
+        label: 'FTE Per Beds',
+        data: 
+      {x: getData('beds'),
+        y: getData('fte')}
+      }]
+    },
+    options: {
+      scales: {
+        xAxes: [{
+          type: 'linear',
+          position: 'bottom'
+        }]
+      }
+    }
+  });
+}
