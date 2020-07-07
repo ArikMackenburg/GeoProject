@@ -24,6 +24,8 @@ function setUserBeds(event){
   var inputBeds = document.getElementById('beds');
   console.log(inputBeds);
   userBeds = Number(inputBeds.value);
+  selectSize(userBeds);
+  budgetChart();
 }
 
 var formElement = document.getElementById('setBeds');
@@ -47,6 +49,77 @@ Organization.prototype.groupOrganizations = function(){
 };
 
 Organization.prototype.groupOrganizations();
+
+var arraySelector;
+function selectSize(userBeds){
+  if(userBeds < 300){
+    arraySelector = smallArray;
+  }else if ((userBeds >= 300) && (userBeds <= 1000)){
+    arraySelector = medArray;
+  }else{
+    arraySelector = largeArray;
+  }
+  console.log(arraySelector);
+}
+
+function getData(propertyName){
+  var answer = [];
+  for(var i = 0; i < arraySelector.length; i++){
+    answer[i] = arraySelector[i][propertyName];
+  }
+  console.log(answer);
+  return answer;
+}
+function color(){
+  var backgroundColor = [];
+  for(var i = 0; i < arraySelector.length; i++){
+    backgroundColor[i] = '#79242f';
+  }
+  return backgroundColor;
+}
+function budgetChart(){
+
+  var ctx = document.getElementById('myChart').getContext('2d');
+
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: getData('beds'),
+      datasets: [{
+        label: 'Test',
+        data: getData('investment'),
+        backgroundColor: color(),
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
