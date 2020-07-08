@@ -154,8 +154,18 @@ function barChart(){
     options: {
       scales: {
         yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Investment'
+          },
           ticks: {
             beginAtZero: true
+          }
+        }],
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Number of Beds'
           }
         }]
       }
@@ -210,7 +220,17 @@ function fteChart(){
       scales: {
         xAxes: [{
           type: 'linear',
-          position: 'bottom'
+          position: 'bottom',
+          scaleLabel: {
+            display: true,
+            labelString: 'Number of Beds'
+          },
+        }],
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Number of FTEs'
+          }
         }]
       }
     }
