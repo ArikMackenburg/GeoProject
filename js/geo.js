@@ -771,7 +771,7 @@ var data = [
   },
   {
     'beds':  0,
-    'fte':  8320,
+    'fte':  12,
     'investment':  null,
     'budget':  'Less than 20%',
     'redesign':  'No plans to redesign'
