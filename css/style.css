@@ -70,3 +70,27 @@ li {
 li:hover {
   text-shadow: 2px 2px 2px#5d141e;
 }
+#info2{
+  
+  background-color: lightgray;
+  padding: 50px;
+  text-align: center;
+  display:inline-table;
+  margin: auto;
+  height: 400px;
+  box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, .3);
+  
+
+}
+h3{
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 15px;
+  display: inline-table;
+  border-bottom: black;
+  border-style: double;
+  margin-top: 50px;
+}
+#sc{
+  color: black;
+}
