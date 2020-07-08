@@ -1,6 +1,5 @@
 * {
   font-family: 'Montserrat', sans-serif;
-
 }
 header {
   background-color: #2c3e50 ;
@@ -55,8 +54,6 @@ article {
   margin-top: 150px;
 }
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background-color: #2c3e50;
   padding: 50px;
@@ -70,7 +67,6 @@ li {
   font-size: 18px;
   margin: 10px;
   font-family: 'Montserrat', sans-serif;
-
 }
 li:hover {
   text-shadow: 2px 2px 2px#5d141e;
