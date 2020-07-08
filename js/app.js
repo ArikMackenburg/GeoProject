@@ -31,8 +31,15 @@ function setUserBeds(event){
   tallyRedesign();
   budgetChart();
   redesignChart();
+  removeForm();
+  var h1 = document.getElementById('h1');
+  h1.textContent = 'Results';
 }
 
+function removeForm(){
+  var form = document.getElementById('setBeds');
+  form.remove();
+}
 var formElement = document.getElementById('setBeds');
 formElement.addEventListener('submit', setUserBeds);
 
@@ -119,7 +126,13 @@ function tallyRedesign(){
 }
 
 
-
+function color2(){
+  var backgroundColor = [];
+  for(var i = 0; i < arraySelector.length; i++){
+    backgroundColor[i] = 'rgba(121, 36, 47, 0.3)';
+  }
+  return backgroundColor;
+}
 
 
 
@@ -185,7 +198,9 @@ function fteChart(){
     data: {
       labels: labels,
       datasets: [{
-        backgroundColor: 'rgba(180, 13, 23, 0.273)',
+        label: 'FTEs',
+        backgroundColor: color2(),
+        bordercolor: color(),
         data: scatterData,
         radius: 6
 
