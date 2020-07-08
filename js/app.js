@@ -27,6 +27,8 @@ function setUserBeds(event){
   selectSize(userBeds);
   budgetChart();
   fteChart();
+  tallyBudget();
+  tallyRedesign();
 }
 
 var formElement = document.getElementById('setBeds');
@@ -79,7 +81,40 @@ function color(){
   return backgroundColor;
 }
 
-
+var budgetArray = [0,0,0,0,0,0];
+function tallyBudget(){
+  for(var i = 0; i < arraySelector.length; i++){
+    if((arraySelector[i].budget === 'Unsure') || (arraySelector[i] === ' ') || (arraySelector[i].budget === '')){
+      budgetArray[0] = budgetArray[0] + 1;
+    }if(arraySelector[i].budget === 'Less than 20%'){
+      budgetArray[1] = budgetArray[1] + 1;
+    }if(arraySelector[i].budget === '20-40%'){
+      budgetArray[2] = budgetArray[2] + 1;
+    }if(arraySelector[i].budget === '40-60%'){
+      budgetArray[3] = budgetArray[3] + 1;
+    }if(arraySelector[i].budget === '60-80%'){
+      budgetArray[4] = budgetArray[4] + 1;
+    }if(arraySelector[i].budget === 'More than 80%'){
+      budgetArray[5] = budgetArray[5] + 1;
+    }
+  }
+}
+var redesignArray = [0,0,0,0,0];
+function tallyRedesign(){
+  for(var i = 0; i < arraySelector.length; i++){
+    if((arraySelector[i].redesign === 'Unsure') || (arraySelector[i].redesign === ' ') || (arraySelector[i].redesign === '')){
+      redesignArray[0] = redesignArray[0] + 1;
+    }if(arraySelector[i].redesign === 'No plans to redesign'){
+      redesignArray[1] = redesignArray[1] + 1;
+    }if(arraySelector[i].redesign === 'Planning'){
+      redesignArray[2] = redesignArray[2] + 1;
+    }if(arraySelector[i].redesign === 'In progress'){
+      redesignArray[3] = redesignArray[3] + 1;
+    }if(arraySelector[i].redesign === 'Recently completed'){
+      redesignArray[4] = redesignArray[4] + 1;
+    }
+  }
+}
 
 
 
@@ -151,7 +186,7 @@ function fteChart(){
         backgroundColor: 'rgba(180, 13, 23, 0.273)',
         data: scatterData,
         radius: 6
-      
+
       }]
     },
     options: {
