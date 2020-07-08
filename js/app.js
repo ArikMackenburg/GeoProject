@@ -79,7 +79,7 @@ function color(){
   return backgroundColor;
 }
 
-var scatterArray = [];
+
 
 
 
@@ -112,19 +112,46 @@ function budgetChart(){
     }
   });
 }
-function fteChart(){
- 
+
+var scatterPlot;
+function fteChart(filteredData){
+  var canvas = document.querySelector('canvas');
+  var labels = [];
+  var ftePerOrg = [];
+  var numOfBeds = [];
+  var scatterData = [];
+  for (var i = 0; i < filteredData.length; i++){
+    var fteNum = Number(filteredData[i]['Number of fte'].slice(0, -1));
+    var bedsNum = Number(filteredData[i]['Number of beds'].slice(0, -1));
+    labels[i] = filteredData[i];
+    ftePerOrg[i] = fteNum;
+    numOfBeds[i] = filteredData[i];
+
+    scatterData[i] = {
+      x: numOfBeds[i],
+      y: ftePerOrg[i]
+
+    };
+  }
+
+  if(scatterPlot){
+    scatterPlot.data.datasets[0].data = scatterData;
+    scatterPlot.update();
+    return;
+  }
+
   var ctx = document.getElementById('fteChart').getContext('2d');
 
 
   var scatterChart = new Chart(ctx, {
     type: 'scatter',
     data: {
+      labels: labels,
       datasets: [{
-        label: 'FTE Per Beds',
-        data: 
-      {x: getData('beds'),
-        y: getData('fte')}
+        backgroundColor: 'rgba(180, 13, 23, 0.273)',
+        data: scatterData,
+        radius: 6
+      
       }]
     },
     options: {
