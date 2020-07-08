@@ -30,6 +30,7 @@ function setUserBeds(event){
   tallyBudget();
   tallyRedesign();
   budgetChart();
+  redesignChart();
 }
 
 var formElement = document.getElementById('setBeds');
@@ -211,6 +212,23 @@ function budgetChart(){
         label: 'Budget',
         data: budgetArray,
         backgroundColor: ['#79242F','#5d141e','#2c3e50','white','lightgray','black'],
+        borderWidth: 1
+      }]
+    },
+  });
+}
+
+
+function redesignChart(){
+  var ctx = document.getElementById('redesignChart').getContext('2d');
+  var redesignChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels:['Unsure','No plans to redesign','Planning','In progress','Recently completed'],
+      datasets: [{
+        label: 'Redesign',
+        data: redesignArray,
+        backgroundColor: ['#79242F','#5d141e','#2c3e50','white','lightgray'],
         borderWidth: 1
       }]
     },

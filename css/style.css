@@ -98,6 +98,7 @@ h3{
   max-width: 50%;
   /* float: left; */
   box-sizing: border-box;
+  display: block;
 }
 #container {
   background-color: lightgray;
