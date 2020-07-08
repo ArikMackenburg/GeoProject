@@ -114,18 +114,18 @@ function budgetChart(){
 }
 
 var scatterPlot;
-function fteChart(filteredData){
+function fteChart(arraySelector){
   var canvas = document.querySelector('canvas');
   var labels = [];
   var ftePerOrg = [];
   var numOfBeds = [];
   var scatterData = [];
-  for (var i = 0; i < filteredData.length; i++){
-    var fteNum = Number(filteredData[i]['Number of fte'].slice(0, -1));
-    var bedsNum = Number(filteredData[i]['Number of beds'].slice(0, -1));
-    labels[i] = filteredData[i];
+  for (var i = 0; i < arraySelector.length; i++){
+    var fteNum = Number(arraySelector[i]['fte'].slice(0, -1));
+    var bedsNum = Number(arraySelector[i]['beds'].slice(0, -1));
+    labels[i] = arraySelector[i].beds;
     ftePerOrg[i] = fteNum;
-    numOfBeds[i] = filteredData[i];
+    numOfBeds[i] = arraySelector[i];
 
     scatterData[i] = {
       x: numOfBeds[i],
