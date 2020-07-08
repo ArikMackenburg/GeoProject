@@ -246,7 +246,7 @@ function budgetChart(){
       datasets: [{
         label: 'Budget',
         data: budgetArray,
-        backgroundColor: ['#79242F','#5d141e','#2c3e50','white','lightgray','black'],
+        backgroundColor: ['#79242F','#5d141e','#2c3e50','white','gray','black'],
         borderWidth: 1
       }]
     },
@@ -263,7 +263,7 @@ function redesignChart(){
       datasets: [{
         label: 'Redesign',
         data: redesignArray,
-        backgroundColor: ['#79242F','#5d141e','#2c3e50','white','lightgray'],
+        backgroundColor: ['#79242F','#5d141e','#2c3e50','white','gray'],
         borderWidth: 1
       }]
     },
