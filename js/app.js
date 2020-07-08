@@ -113,9 +113,9 @@ function budgetChart(){
   });
 }
 
-var scatterPlot;
+// var scatterPlot;
 function fteChart(){
-  var canvas = document.querySelector('canvas');
+  // var canvas = document.querySelector('canvas');
   var labels = [];
   var ftePerOrg = [];
   var numOfBeds = [];
@@ -123,7 +123,7 @@ function fteChart(){
   for (var i = 0; i < arraySelector.length; i++) {
     var fteNum = Number(arraySelector[i].fte);
     var bedsNum = Number(arraySelector[i].beds);
-    labels[i] = arraySelector[i].beds;
+    // labels[i] = arraySelector[i].beds;
     ftePerOrg[i] = fteNum;
     numOfBeds[i] = bedsNum;
 
@@ -134,11 +134,11 @@ function fteChart(){
     };
   }
 
-  if(scatterPlot){
-    scatterPlot.data.datasets[0].data = scatterData;
-    scatterPlot.update();
-    return;
-  }
+  // if(scatterPlot){
+  //   scatterPlot.data.datasets[0].data = scatterData;
+  //   scatterPlot.update();
+  //   return;
+  // }
 
   var ctx = document.getElementById('fteChart').getContext('2d');
 
