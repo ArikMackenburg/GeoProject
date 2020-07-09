@@ -4,6 +4,10 @@ console.log(data);
 var arrayData =[];
 var userBeds = 0;
 
+var invis = document.getElementById('border');
+invis.style.opacity = '0';
+
+
 function Organization(beds,fte,investment,budget,redesign){
   this.beds = beds;
   this.fte = fte;
@@ -34,6 +38,15 @@ function setUserBeds(event){
   removeForm();
   var h1 = document.getElementById('h1');
   h1.textContent = 'Results';
+  var investment = document.getElementById('investment');
+  investment.textContent = 'Marketing Investment';
+  var fte = document.getElementById('fte');
+  fte.textContent = 'Full Time Employee\'s';
+  var budget = document.getElementById('budget');
+  budget.textContent = 'Percent of Budget for Digital Marketing';
+  var redesign = document.getElementById('redesign');
+  redesign.textContent = 'Redesign';
+  invis.style.opacity = '1';
 }
 
 function removeForm(){
@@ -156,7 +169,7 @@ function barChart(){
         yAxes: [{
           scaleLabel: {
             display: true,
-            labelString: 'Investment'
+            labelString: 'Marketing Investment $'
           },
           ticks: {
             beginAtZero: true
@@ -250,6 +263,11 @@ function budgetChart(){
         borderWidth: 1
       }]
     },
+    options:{
+      legend:{
+        position: 'bottom'
+      }
+    }
   });
 }
 
@@ -267,5 +285,12 @@ function redesignChart(){
         borderWidth: 1
       }]
     },
+    options:{
+      legend:{
+        position: 'bottom'
+      }
+    }
   });
 }
+
+
