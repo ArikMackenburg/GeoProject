@@ -1,6 +1,5 @@
 * {
   font-family: 'Montserrat', sans-serif;
-
 }
 header {
   background-color: #2c3e50 ;
@@ -38,7 +37,7 @@ h2 {
   /* max-width: 50%; */
   display: block;
   margin: auto;
-  height: 400px;
+  height: 550px;
   box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, .3);
   /* max-width: 1300px; */
 }
@@ -52,9 +51,10 @@ h2 {
   background-color: #5d141e;
 }
 article {
-  margin-top: 150px;
+  
 }
 footer {
+  width: 100%;
   background-color: #2c3e50;
   padding: 50px;
   margin-top: 30px;
@@ -67,7 +67,6 @@ li {
   font-size: 18px;
   margin: 10px;
   font-family: 'Montserrat', sans-serif;
-
 }
 li:hover {
   text-shadow: 2px 2px 2px#5d141e;
@@ -101,7 +100,7 @@ h3{
 }
 .chart {
   max-width: 50%;
-  width: 600px;
+  width: 100%;
   float: left;
   box-sizing: border-box;
   display: block;
@@ -150,4 +149,18 @@ input {
 }
 #personal{
 max-width;
+}
+#p2 p{
+  font-size: 15px;
+  margin-bottom: ;
+  
+  
+  text-align: center;
+
+}
+iframe{
+  margin-top: 30px ;
+  margin-bottom: 30px;
+  
+  
 }
