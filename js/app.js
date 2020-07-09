@@ -47,6 +47,8 @@ function setUserBeds(event){
   var redesign = document.getElementById('redesign');
   redesign.textContent = 'Redesign';
   invis.style.opacity = '1';
+  var inputAmount = document.getElementById('inputAmount');
+  inputAmount.textContent = 'Your beds: ' + userBeds;
 }
 
 function removeForm(){
