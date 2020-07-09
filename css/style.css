@@ -37,7 +37,7 @@ h2 {
   /* max-width: 50%; */
   display: block;
   margin: auto;
-  height: 400px;
+  height: 550px;
   box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, .3);
   /* max-width: 1300px; */
 }
@@ -51,7 +51,7 @@ h2 {
   background-color: #5d141e;
 }
 article {
-  margin-top: 150px;
+  
 }
 footer {
 
@@ -116,6 +116,9 @@ h3{
 }
 #sc{
   color: black;
+  font-weight: bolder;
+  padding: 15px;
+  
 }
 .chart {
   max-width: 50%;
@@ -163,4 +166,21 @@ input {
   color: #79242F;
   font-size: 50px;
   font-weight: bold;
+}
+#personal{
+max-width;
+}
+#p2 p{
+  font-size: 15px;
+  margin-bottom: ;
+  
+  
+  text-align: center;
+
+}
+iframe{
+  margin-top: 30px ;
+  margin-bottom: 30px;
+  
+  
 }
