@@ -207,3 +207,6 @@ iframe{
   left: 30px;
   position: relative;
 }
+#inputAmount {
+  margin-bottom: 10px;
+}
