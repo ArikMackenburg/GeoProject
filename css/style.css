@@ -22,9 +22,6 @@ a {
   margin-top: -75px;
   margin-left: -50px;
 }
-body {
-  /* background-color: lightgray; */
-}
 h2 {
   font-size: 25px;
   color: #79242F;
@@ -34,38 +31,28 @@ h2 {
   background-color: lightgray;
   padding: 30px;
   text-align: center;
-  /* max-width: 50%; */
   display: block;
   margin: auto;
   min-height: 600px;
   box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, .3);
-  /* max-width: 1300px; */
 }
 #compare {
   background-color: #79242F;
   padding: 15px;
   box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, .3);
   border-radius: 5px;
-  
 }
 #compare:hover {
   background-color: #5d141e;
 }
-article {
-  
-}
 footer {
-
-  /* position: absolute;
-  bottom: 0; */
-  
   width: 100%;
   background-color: #2c3e50;
   padding: 80px;
   margin-top: 30px;
   box-sizing: border-box;
 }
-footer img{
+footer img {
   box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, .3);
 }
 footer img:hover {
@@ -83,30 +70,28 @@ li {
 li:hover {
   text-shadow: 2px 2px 2px#5d141e;
 }
-#info2{
+#info2 {
   background-color: lightgray;
   padding: 50px;
   text-align: center;
-  /* display:inline-table; */
-  margin: auto;
-  /* height: 400px; */
+  margin: auto; 
   box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, .3);
   width: 100%
 }
-#info2 img{
+#info2 img {
   border: 5px solid #79242F;
   padding: 5px;
   border-radius: 15px;
   box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, .3);
 }
-#info2 p{
+#info2 p {
   width: 50%;
   text-align: center;
   margin: auto;
   line-height: 25px;
   padding: 15px;
 }
-h3{
+h3 {
   text-align: center;
   font-size: 25px;
   margin-bottom: 15px;
@@ -115,7 +100,7 @@ h3{
   border-style: double;
   margin-top: 50px;
 }
-#sc{
+#sc {
   color: black;
   font-weight: bolder;
   padding: 15px;
@@ -177,25 +162,20 @@ input {
   display: block;
   margin: auto;
   box-shadow: rgba(0, 0, 0, .3);
-  /* color: #79242F; */
-
 }
-iframe{
+iframe {
   margin-top: 30px ;
   margin-bottom: 30px;
    border: 5px solid #79242F;
   padding: 5px;
   border-radius: 15px;
   box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, .3);
-  
-  
 }
 #bottomNav {
   float: left;
-  /* margin: 0; */
   margin-top: -30px;
 }
-#g{
+#g {
   border: 5px solid #79242F;
   padding: 5px;
   border-radius: 15px;

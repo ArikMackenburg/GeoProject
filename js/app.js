@@ -7,7 +7,6 @@ var userBeds = 0;
 var invis = document.getElementById('border');
 invis.style.opacity = '0';
 
-
 function Organization(beds,fte,investment,budget,redesign){
   this.beds = beds;
   this.fte = fte;
@@ -16,8 +15,6 @@ function Organization(beds,fte,investment,budget,redesign){
   this.redesign = redesign;
   arrayData.push(this);
 }
-
-// var stringData = JSON.stringify(data);
 
 for(var i = 0; i < data.length; i++){
   new Organization(data[i].beds, data[i].fte,data[i].investment,data[i].budget,data[i].redesign);
@@ -55,7 +52,6 @@ function removeForm(){
 }
 var formElement = document.getElementById('setBeds');
 formElement.addEventListener('submit', setUserBeds);
-
 
 var smallArray = [];
 var medArray = [];
@@ -121,6 +117,7 @@ function tallyBudget(){
     }
   }
 }
+
 var redesignArray = [0,0,0,0,0];
 function tallyRedesign(){
   for(var i = 0; i < arraySelector.length; i++){
@@ -138,7 +135,6 @@ function tallyRedesign(){
   }
 }
 
-
 function color2(){
   var backgroundColor = [];
   for(var i = 0; i < arraySelector.length; i++){
@@ -147,12 +143,8 @@ function color2(){
   return backgroundColor;
 }
 
-
-
 function barChart(){
-
   var ctx = document.getElementById('myChart').getContext('2d');
-
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -186,9 +178,7 @@ function barChart(){
   });
 }
 
-// var scatterPlot;
 function fteChart(){
-  // var canvas = document.querySelector('canvas');
   var labels = [];
   var ftePerOrg = [];
   var numOfBeds = [];
@@ -196,25 +186,15 @@ function fteChart(){
   for (var i = 0; i < arraySelector.length; i++) {
     var fteNum = Number(arraySelector[i].fte);
     var bedsNum = Number(arraySelector[i].beds);
-    // labels[i] = arraySelector[i].beds;
     ftePerOrg[i] = fteNum;
     numOfBeds[i] = bedsNum;
-
     scatterData[i] = {
       x: numOfBeds[i],
       y: ftePerOrg[i]
-
     };
   }
 
-  // if(scatterPlot){
-  //   scatterPlot.data.datasets[0].data = scatterData;
-  //   scatterPlot.update();
-  //   return;
-  // }
-
   var ctx = document.getElementById('fteChart').getContext('2d');
-
 
   var scatterChart = new Chart(ctx, {
     type: 'scatter',
@@ -270,7 +250,6 @@ function budgetChart(){
     }
   });
 }
-
 
 function redesignChart(){
   var ctx = document.getElementById('redesignChart').getContext('2d');
