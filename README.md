@@ -10,9 +10,9 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 ### Reflections and Comments
 * We learned alot during this project and found it very insightful working with a real client
 ### Wireframe
-* ![Wireframe][images/home.png]
-* ![Wireframe][images/aboutus.png]
-* ![Wireframe][images/survey.png]
+* ![Wireframe](images/home.png)
+* ![Wireframe](images/aboutus.png)
+* ![Wireframe](images/survey.png)
 ### Agreement
 * Communication plan - Meet up in the morning and talk about what we have to accomplish that given day, share idead, etc.
 
